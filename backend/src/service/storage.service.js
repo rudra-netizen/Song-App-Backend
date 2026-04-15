@@ -11,7 +11,7 @@ function uploadFile(file) {
     imagekit.upload(
       {
         file: file.buffer,
-        fileName: mongoose.Types.ObjectId().toString(),
+        fileName: new mongoose.Types.ObjectId().toString(),
         folder: "apne-gaane",
       },
       (error, result) => {
